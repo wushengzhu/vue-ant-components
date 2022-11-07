@@ -1,22 +1,20 @@
-const path = require("path");
-const BundleAnalyzerPlugin =
-  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const path = require('path')
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, dir)
 }
-
 
 module.exports = {
   // lintOnSave: false,
   // 是否在开发环境下通过 eslint-loader 在每次保存时 lint 代码，需要安装@vue/cli-plugin-eslint
-  lintOnSave: process.env.NODE_ENV === "development",
+  lintOnSave: process.env.NODE_ENV === 'development',
   devServer: {
     proxy: {
       // [process.env.VUE_APP_BASE_API]:
-      "/api": {
-        target: "http://127.0.0.1:2022",
+      '/api': {
+        target: 'http://127.0.0.1:2022',
         // 开启websocket服务，默认true
         ws: true,
         changeOrigin: true,
@@ -29,8 +27,8 @@ module.exports = {
     plugins: [
       // webpack分析器插件
       new BundleAnalyzerPlugin({
-        analyzerMode: "disabled",
-        analyzerHost: "127.0.0.1",
+        analyzerMode: 'disabled',
+        analyzerHost: '127.0.0.1',
         analyzerPort: 8888,
         // 在static模式下生成的报告文件
         // reportFilename: 'report.html',
@@ -38,14 +36,14 @@ module.exports = {
         openAnalyzer: true,
         // 在budle输出目录中生成
         // generateStatsFile: true,
-        statsFilename: "stats.json",
-        logLevel: "info",
+        statsFilename: 'stats.json',
+        logLevel: 'info',
       }),
     ],
     resolve: {
-      extensions: [".ts", ".tsx", ".js", ".json"],
+      extensions: ['.ts', '.tsx', '.js', '.json'],
       alias: {
-        "@": resolve('src'),
+        '@': resolve('src'),
       },
     },
     module: {
@@ -55,8 +53,8 @@ module.exports = {
   pluginOptions: {
     // 安装style-resources-loader和vue-cli-plugin-style-resources-loader
     // 避免在每个样式文件中手动的@import导入
-    "style-resources-loader": {
-      preProcessor: "less",
+    'style-resources-loader': {
+      preProcessor: 'less',
       patterns: [
         // path.resolve(__dirname, 'src/styles/variables.scss'),
         resolve('src/styles/mixins.less'),
@@ -78,4 +76,4 @@ module.exports = {
       },
     },
   },
-};
+}

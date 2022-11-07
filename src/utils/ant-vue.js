@@ -1,0 +1,120 @@
+import {
+  ConfigProvider,
+  Layout,
+  Input,
+  InputNumber,
+  Button,
+  Switch,
+  Radio,
+  Checkbox,
+  Select,
+  Card,
+  Form,
+  // FormModel,
+  Row,
+  Col,
+  Modal,
+  Table,
+  Tabs,
+  Icon,
+  Badge,
+  Popover,
+  Dropdown,
+  List,
+  Avatar,
+  Breadcrumb,
+  Steps,
+  Spin,
+  Menu,
+  Drawer,
+  Tooltip,
+  Alert,
+  Tag,
+  Divider,
+  DatePicker,
+  TimePicker,
+  Upload,
+  Progress,
+  Skeleton,
+  Popconfirm,
+  PageHeader,
+  Result,
+  Statistic,
+  Descriptions,
+  message,
+  notification,
+  Collapse,
+  Timeline,
+  AutoComplete,
+  Transfer,
+  TreeSelect,
+  Pagination,
+  Tree,
+  Cascader,
+  Anchor,
+  Carousel,
+  BackTop,
+  Empty,
+} from 'ant-design-vue'
+
+const AntVue = (app) => {
+  app.use(ConfigProvider)
+  app.use(Layout)
+  app.use(Input)
+  app.use(InputNumber)
+  app.use(Button)
+  app.use(Switch)
+  app.use(Radio)
+  app.use(Checkbox)
+  app.use(Select)
+  app.use(Card)
+  app.use(Form)
+  // app.use(FormModel);
+  app.use(Row)
+  app.use(Col)
+  app.use(Modal)
+  app.use(Table)
+  app.use(Tabs)
+  app.use(Icon)
+  app.use(Badge)
+  app.use(Popover)
+  app.use(Dropdown)
+  app.use(List)
+  app.use(Avatar)
+  app.use(Breadcrumb)
+  app.use(Steps)
+  app.use(Spin)
+  app.use(Menu)
+  app.use(Drawer)
+  app.use(Tooltip)
+  app.use(Alert)
+  app.use(Tag)
+  app.use(Divider)
+  app.use(DatePicker)
+  app.use(TimePicker)
+  app.use(Upload)
+  app.use(Progress)
+  app.use(Skeleton)
+  app.use(Popconfirm)
+  app.use(PageHeader)
+  app.use(Result)
+  app.use(Statistic)
+  app.use(Descriptions)
+  app.use(Collapse)
+  app.use(Timeline)
+  app.use(AutoComplete)
+  app.use(Transfer)
+  app.use(TreeSelect)
+  app.use(Pagination)
+  app.use(Tree)
+  app.use(Cascader)
+  app.use(Anchor)
+  app.use(Carousel)
+  app.use(BackTop)
+  app.use(Empty)
+
+  process.env.NODE_ENV !== 'production' &&
+    console.warn('ant design use lazy-load !')
+}
+
+export default AntVue
